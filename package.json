@@ -1,0 +1,15 @@
+{
+  "name": "smartbite-ai",
+  "version": "1.0.0",
+  "description": "SmartBite AI - Intelligent Food Rescue, Predictive Surplus Management & Multi-Mode Delivery Optimization",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "test": "npm run test --prefix server"
+  },
+  "keywords": ["food-rescue", "logistics", "ai", "hackathon"],
+  "author": "SmartBite AI Team",
+  "license": "MIT"
+}
