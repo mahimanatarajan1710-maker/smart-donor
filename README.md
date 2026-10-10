@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SmartBite AI — Predict. Pool. Rescue.
 
 > **Intelligent Food Rescue, Predictive Surplus Management & Multi-Mode Delivery Optimization**
@@ -84,3 +85,7 @@ npm test
 5. **Minute 5: Prediction & Offline Queue**:
    - Open **Donations** (`/donations`). Show how offline entries queue in browser IndexedDB and sync without duplicates.
    - Check the **Impact Analytics** (`/analytics`) showing CO2 prevention and verified costs saved.
+=======
+# smart-donor
+Smartdonor AI predicts surplus food, optimizes collection routes, and connects donors, NGOs, and volunteers to reduce food waste and transportation costs
+>>>>>>> 2ddac8617b38b4405a73c2358d5e495d1ed933eb
