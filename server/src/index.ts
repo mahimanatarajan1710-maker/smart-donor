@@ -14,12 +14,17 @@ import {
 } from './models.js';
 import { optimizePickupPlans, NGO_HQ } from './optimizer.js';
 import { predictOutletSurplus } from './predictor.js';
+import organicRoutes from './organicRoutes.js';
+import { seedOrganicInitialData } from './organicSeed.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+// Mount Organic Waste & Fertilizer Business Module
+app.use('/api/organic', organicRoutes);
 
 // API Root Status
 app.get('/api/status', (req: Request, res: Response) => {
@@ -35,6 +40,7 @@ app.get('/api/status', (req: Request, res: Response) => {
 app.post('/api/admin/reset-demo', async (req: Request, res: Response) => {
   try {
     await seedInitialData();
+    await seedOrganicInitialData();
     res.json({ success: true, message: 'Demo environment reset to initial 15 outlets & verified status.' });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
@@ -458,6 +464,7 @@ export { app };
 if (process.env.NODE_ENV !== 'test') {
   connectDB().then(async () => {
     await seedInitialData();
+    await seedOrganicInitialData();
     app.listen(PORT, () => {
       console.log(`[SmartBite Server] Running on http://localhost:${PORT}`);
     });

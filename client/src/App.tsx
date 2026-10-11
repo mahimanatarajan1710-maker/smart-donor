@@ -11,6 +11,7 @@ import { LiveOperationsPage } from './pages/LiveOperationsPage';
 import { AnalyticsPage } from './pages/AnalyticsPage';
 import { TrackingMapPage } from './pages/TrackingMapPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { OrganicWasteModulePage } from './pages/OrganicWasteModulePage';
 
 export function App() {
   const [isResetting, setIsResetting] = useState(false);
@@ -48,6 +49,7 @@ export function App() {
             <Routes>
               <Route path="/" element={<OverviewPage />} />
               <Route path="/optimizer" element={<OptimizerPage />} />
+              <Route path="/organic-waste" element={<OrganicWasteModulePage />} />
               <Route path="/donations" element={<DonationsPage />} />
               <Route path="/volunteers" element={<VolunteersPage />} />
               <Route path="/transport" element={<TransportNetworkPage />} />

@@ -11,7 +11,8 @@ import {
   BarChart3, 
   Settings, 
   Leaf,
-  WifiOff
+  WifiOff,
+  Sprout
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -24,6 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOffline = false }) => {
     { name: 'Live Operations', path: '/live', icon: Activity },
     { name: 'Donations', path: '/donations', icon: UtensilsCrossed },
     { name: 'Pickup Optimizer', path: '/optimizer', icon: Route, highlight: true },
+    { name: 'Organic Waste & Fertilizer', path: '/organic-waste', icon: Sprout, highlight: true },
     { name: 'Volunteers', path: '/volunteers', icon: Users },
     { name: 'Transport Network', path: '/transport', icon: Truck },
     { name: 'Live Tracking', path: '/tracking', icon: Radio },
